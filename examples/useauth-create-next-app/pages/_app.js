@@ -1,5 +1,6 @@
-import { AuthConfig } from "react-use-auth";
-import { Auth0 } from "react-use-auth/auth0";
+import React from "react";
+import { AuthConfig } from "../utils";
+import { Auth0 } from "../utils/providers/Auth0";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
@@ -10,8 +11,8 @@ function MyApp({ Component, pageProps }) {
                 authProvider={Auth0}
                 navigate={url => router.push(url)}
                 params={{
-                    auth0_domain: "useauth.auth0.com",
-                    auth0_client_id: "GjWNFNOHq1ino7lQNJBwEywa1aYtbIzh"
+                    domain: "useauth.auth0.com",
+                    clientID: "GjWNFNOHq1ino7lQNJBwEywa1aYtbIzh"
                 }}
             />
             <Component {...pageProps} />
@@ -20,3 +21,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+2;

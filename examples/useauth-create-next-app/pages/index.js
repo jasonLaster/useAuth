@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Nav from "../components/nav";
 import { Flex, Button, Box } from "rebass";
-import { useAuth } from "react-use-auth";
+import { useAuth } from "../utils";
 
 const Login = () => {
     const { isAuthenticated, isAuthenticating, login, logout } = useAuth();

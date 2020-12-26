@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { useAuth } from "react-use-auth";
+import { useAuth } from "../utils";
 
 const AUTHCallback = () => {
     const { handleAuthentication } = useAuth();
     useEffect(() => {
+        console.log(`handleAuth`);
         handleAuthentication();
     }, []);
 
